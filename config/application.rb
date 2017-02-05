@@ -16,7 +16,11 @@ Bundler.require(*Rails.groups)
 
 module RagamuffinApi
   class Application < Rails::Application
-    config.autoload_paths << Rails.root.join('lib')
+    config.eager_load_paths << Rails.root.join('lib')
     config.api_only = true
+    config.action_dispatch.default_headers.merge!({
+  		'Access-Control-Allow-Origin' => '*',
+  		'Access-Control-Request-Method' => '*'
+	})
   end
 end
