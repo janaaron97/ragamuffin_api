@@ -3,9 +3,9 @@
 one:
   word_listed: MyString
   meaning: MyText
-  user_id: one
+  user_id: 1
 
 two:
   word_listed: MyString
   meaning: MyText
-  user_id: two
+  user_id: 1
